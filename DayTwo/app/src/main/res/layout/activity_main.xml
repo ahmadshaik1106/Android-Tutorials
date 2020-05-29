@@ -23,10 +23,47 @@
         android:gravity="center"
         android:textSize="300sp"
         />
-    <Button
-        android:layout_width="match_parent"
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+        >
+        <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Count"
-        android:onClick="count"/>
+        android:text="Add"
+        android:onClick="add"/>
+
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Subtract"
+        android:onClick="subtract"/>
+    </LinearLayout>
+
+
 </LinearLayout>
+
+
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:orientation="horizontal"-->
+<!--    />-->
+<!--<Button-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_weight="1"-->
+<!--android:text="Add"-->
+<!--android:onClick="add"/>-->
+
+<!--<Button-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_weight="1"-->
+<!--android:text="Subtract"-->
+<!--android:onClick="subtract"/>-->
+<!--    </LinearLayout>-->

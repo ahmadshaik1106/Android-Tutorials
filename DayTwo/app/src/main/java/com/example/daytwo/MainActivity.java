@@ -25,7 +25,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void count(View view) {
-        i++;
-        tv.setText(""+i);
+
+    }
+
+    public void add(View view) {
+
+        if(i>=99){
+            Toast.makeText(this,"You cannot add more than "+i,Toast.LENGTH_SHORT).show();
+        }else {
+            i++;
+            tv.setText("" + i);
+        }
+    }
+
+    public void subtract(View view) {
+        if(i<=0){
+            Toast.makeText(this,"You can not subtract less than "+i,Toast.LENGTH_SHORT).show();
+        }else {
+            i--;
+            tv.setText("" + i);
+        }
     }
 }
+
