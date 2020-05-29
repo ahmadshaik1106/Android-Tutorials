@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DayTwo</string>
+    <string name="val">val</string>
+    <string name="toast">toast</string>
+</resources>
