@@ -3,10 +3,12 @@ package com.example.daytwointent;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,5 +30,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void search(View view) {
+        String l = link.getText().toString().trim();
+        Uri uri;
+        uri = Uri.parse("https://"+l);
+        Intent i = new Intent(Intent.ACTION_VIEW,uri);
+        Toast.makeText(this,"opening "+uri,Toast.LENGTH_SHORT).show();
+        startActivity(i);
     }
 }

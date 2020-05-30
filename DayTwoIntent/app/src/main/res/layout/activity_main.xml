@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/link"
-        android:hint="Enter link"
+        android:hint="Enter link or simply hit search"
         />
     <Button
         android:layout_width="match_parent"
