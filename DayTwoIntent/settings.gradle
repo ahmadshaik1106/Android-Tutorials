@@ -1,0 +1,2 @@
+rootProject.name='DayTwoIntent'
+include ':app'
