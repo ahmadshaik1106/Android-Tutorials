@@ -3,6 +3,8 @@ package com.example.optionsmenu;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.MenuItem;
@@ -27,15 +29,21 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.c1:
-                Toast.makeText(this,"You slected "+item.getTitle(),Toast.LENGTH_SHORT).show();break;
+                Intent i = new Intent(this,MainActivity.class);
+                startActivity(i);
+                Toast.makeText(this,"You slected "+item.getTitle(),Toast.LENGTH_SHORT).show();
+                return true;
             case R.id.c2:
-                Toast.makeText(this,"You slected "+item.getTitle(),Toast.LENGTH_SHORT).show();break;
+                Toast.makeText(this,"You slected "+item.getTitle(),Toast.LENGTH_SHORT).show();
+                return true;
             case R.id.c3:
-                Toast.makeText(this,"You slected "+item.getTitle(),Toast.LENGTH_SHORT).show();break;
+                Toast.makeText(this,"You slected "+item.getTitle(),Toast.LENGTH_SHORT).show();
+                return true;
         }
-        return super.onOptionsItemSelected(item);
+
+        return super.onContextItemSelected(item);
     }
 }
