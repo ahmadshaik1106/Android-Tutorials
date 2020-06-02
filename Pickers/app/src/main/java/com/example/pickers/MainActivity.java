@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String m = String.format("%02d", (month + 1));
                 String d = String.format("%02d", dayOfMonth);
-                tv.setText("" + d + "-" + m + "-" + year);
+                tv.setText(d + "-" + m + "-" + year);
                 System.out.println("" + d + "-" + m + "-" + year);
             }
         }, currentYear, currentMonth, currentDay);
@@ -80,24 +80,12 @@ public class MainActivity extends AppCompatActivity {
         TimePickerDialog tp = new TimePickerDialog(MainActivity.this, new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                tv2.setText(hourOfDay+":"+minute);
+                String h = String.format("%02d",hourOfDay);
+                String m = String.format("%02d",minute);
+                tv2.setText(h+":"+m);
             }
         },currentHour,currentMinute,false);
         tp.show();
     }
 }
 
-
-/*
-new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-
-                String m = String.format("%02d", (month + 1));
-                String d = String.format("%02d", dayOfMonth);
-                tv.setText("" + d + "-" + m + "-" + year);
-                System.out.println("" + d + "-" + m + "-" + year);
-            }
-        },
-
-*/
