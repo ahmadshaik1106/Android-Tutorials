@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         b.setTitle("Alert");
         b.setMessage("Do you want to exit");
-//        b.setIcon(R.drawable.alert);
+        b.setIcon(R.drawable.ic_exit_to_app_black_24dp);
         b.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
