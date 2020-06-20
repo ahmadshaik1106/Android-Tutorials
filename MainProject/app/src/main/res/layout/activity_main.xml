@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="25sp"
+    android:paddingRight="25sp"
+    android:paddingBottom="80sp"
+    android:paddingTop="100sp"
+    android:background="@drawable/auth_bg"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#50FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35">
+
+        <TextView
+            android:id="@+id/log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="Register"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:backgroundTint="#7B1FA2"
+            android:drawableRight="@drawable/ic_person_black_24dp"
+            android:drawablePadding="10sp"
+            android:paddingRight="12.5sp"
+            android:hint="Username"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/log" />
+
+        <EditText
+            android:id="@+id/em"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:backgroundTint="#7B1FA2"
+            android:drawableRight="@drawable/ic_email_black_24dp"
+            android:drawablePadding="10sp"
+            android:paddingRight="12.5sp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/em"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#7B1FA2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pword1"
+
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="#7B1FA2"
+                android:drawablePadding="10sp"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/l1"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#7B1FA2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pword2"
+
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="#7B1FA2"
+                android:drawablePadding="10sp"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/regBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20sp"
+            android:background="@drawable/round_corner_btn"
+            android:gravity="center"
+            android:onClick="register"
+            android:text="Register"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l2" />
+
+        <TextView
+            android:id="@+id/regLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:onClick="gotoLogin"
+            android:text="Already have an account? Login here"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regBtn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+    <com.google.android.material.textfield.TextInputLayout
+
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#7B1FA2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/pword1"
+            >
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pword2"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="#7B1FA2"
+                android:drawableLeft="@drawable/ic_lock_black_24dp"
+                android:drawablePadding="10sp"
+                android:hint="Password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+-->
